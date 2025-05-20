@@ -1,36 +1,3 @@
-[
-  {
-    "operation": "default",
-    "spec": {
-      // Step 1: Define the condition
-      "key1": "true",
-      "key2": "true"
-    }
-  },
-  {
-    "operation": "modify-overwrite-beta",
-    "spec": {
-      // Step 1: Define the condition
-      "key1": "=toBoolean",
-      "key2": "=toBoolean"
-    }
-  },
-  {
-    "operation": "shift",
-    "spec": {
-      //If key1 & key are true then perform transformation
-      "key1": {
-        "true": {
-          "@(2,key2)": {
-            "true": {
-              "@(4)": {
-                //"*": "&"
-                "value_1": "value_2"
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-]
+{
+  "value_1": 1
+}
