@@ -1,0 +1,14 @@
+[
+  {
+    "operation": "com.appify.jolt.extensions.AppifyJoltModifier$Overwritr",
+    "spec": {
+      "activitytime": "=convertEpochToUtc(@(1,lastSyncedOn))"
+    }
+  },
+  {
+    "operation": "modify-default-beta",
+    "spec": {
+      "activitytime": "@(1,epoch_10_minutes_from_now)"
+    }
+  }
+]

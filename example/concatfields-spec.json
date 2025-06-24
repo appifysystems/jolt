@@ -1,0 +1,29 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "record": {
+        "field1": "temp1",
+        "field2": "temp2",
+        "field3": "temp3"
+      },
+      "configPayload": {
+        "llmModel": "llm_model_to_use"
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "text": "=concat(@(1,temp1), '|', @(1,temp2), '|', @(1,temp3))"
+    }
+  },
+  {
+    "operation": "remove",
+    "spec": {
+      "temp1": "",
+      "temp2": "",
+      "temp3": ""
+    }
+  }
+]

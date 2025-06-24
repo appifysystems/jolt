@@ -1,0 +1,25 @@
+[
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "data": {
+        "*": {
+          "keydev_effective_from_date_only": "=substring(@(1,keydev_effective_from_datetime),0,10)",
+          "keydev_effective_from_time_only": "=substring(@(1,keydev_effective_from_datetime),11,19)",
+          "keydev_effective_from_datetime": "=concat(@(1,keydev_effective_from_date_only),'T',@(1,keydev_effective_from_time_only),'Z')"
+        }
+      }
+    }
+  },
+  {
+    "operation": "remove",
+    "spec": {
+      "data": {
+        "*": {
+          "keydev_effective_from_date_only": "",
+          "keydev_effective_from_time_only": ""
+        }
+      }
+    }
+  }
+]
