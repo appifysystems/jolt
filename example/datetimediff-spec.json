@@ -1,0 +1,26 @@
+[
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "diffMillis": "=longSubtract(@(1,end), @(1,start))"
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "Duration": "=divide(@(1,diffMillis),60000)"
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "Duration": "=toInteger(@(1,Duration))"
+    }
+  },
+  {
+    "operation": "com.appify.jolt.extensions.AppifyJoltModifier$Overwritr",
+    "spec": {
+      "Duration": "=ConvertMinutesToHHMM(@(1,Duration))"
+    }
+  }
+]
