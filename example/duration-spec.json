@@ -1,41 +1,8 @@
 [
   {
-    "operation": "modify-overwrite-beta",
+    "operation": "com.appify.jolt.extensions.AppifyJoltModifier$Overwritr",
     "spec": {
-      "Duration": "=toDouble"
-    }
-  },
-  {
-    "operation": "modify-overwrite-beta",
-    "spec": {
-      "quotent": "=divideAndRound(0,@(1,Duration),60)"
-    }
-  },
-  {
-    "operation": "modify-overwrite-beta",
-    "spec": {
-      "inverseMinutes": "=divide(1, 60)",
-      "quotentInMinutes": "=divideAndRound(0,@(1,quotent),@(1,inverseMinutes))",
-      "minutesReminder": "=doubleSubtract(@(1,Duration),@(1,quotentInMinutes))",
-      "hours": "=toInteger(@(1,quotent))",
-      "minutes": "=toInteger(@(1,minutesReminder))"
-    }
-  },
-  {
-    "operation": "modify-overwrite-beta",
-    "spec": {
-      "Duration": "=concat(@(1,hours),':',@(1,minutes))"
-    }
-  },
-  {
-    "operation": "remove",
-    "spec": {
-      "quotent": "",
-      "inverseMinutes": "",
-      "quotentInMinutes": "",
-      "minutesReminder": "",
-      "hours": "",
-      "minutes": ""
+      "Duration": "=ConvertMinutesToHHMM(@(1,Duration))"
     }
   }
 ]
