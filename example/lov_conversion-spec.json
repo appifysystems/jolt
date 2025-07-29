@@ -1,0 +1,15 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "status": {
+        "InProgress": {
+          "#INPROGRESS": "new_status"
+        },
+        "New": {
+          "#NEW": "new_status"
+        }
+      }
+    }
+  }
+]
