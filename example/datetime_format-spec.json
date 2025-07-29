@@ -4,9 +4,9 @@
     "spec": {
       "data": {
         "*": {
-          "keydev_effective_from_date_only": "=substring(@(1,keydev_effective_from_datetime),0,10)",
-          "keydev_effective_from_time_only": "=substring(@(1,keydev_effective_from_datetime),11,19)",
-          "keydev_effective_from_datetime": "=concat(@(1,keydev_effective_from_date_only),'T',@(1,keydev_effective_from_time_only),'Z')"
+          "date_only": "=substring(@(1,datetime),0,10)",
+          "time_only": "=substring(@(1,datetime),11,19)",
+          "datetime": "=concat(@(1,date_only),'T',@(1,time_only),'Z')"
         }
       }
     }
@@ -16,8 +16,8 @@
     "spec": {
       "data": {
         "*": {
-          "keydev_effective_from_date_only": "",
-          "keydev_effective_from_time_only": ""
+          "date_only": "",
+          "only": ""
         }
       }
     }
