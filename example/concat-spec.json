@@ -1,0 +1,14 @@
+[
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "note": "=concat('|-- ',@(1,String1),' - ',@(1,String2),' --| \n',@(1,note),'/','\n',@(1,note_desc))"
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "note": "all_note"
+    }
+  }
+]
