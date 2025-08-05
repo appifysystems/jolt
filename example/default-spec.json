@@ -1,0 +1,14 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "*": null
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+      "notify": false
+    }
+  }
+]
